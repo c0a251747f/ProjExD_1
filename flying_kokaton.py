@@ -30,7 +30,7 @@ def main():
         if key_lst[pg.K_LEFT]:
             b-=1
         if key_lst[pg.K_RIGHT]:
-            a+=2
+            b+=2
         kk_rct.move_ip((b,a))  
                   
         x= tmr%3200
