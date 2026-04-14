@@ -21,16 +21,18 @@ def main():
             if event.type == pg.QUIT: return
 
         key_lst = pg.key.get_pressed()  # 練習10：すべてのキーの押下状態の取得
-        kk_rct.move_ip((-1,0))
-        if key_lst[pg.K_UP]:  # 上矢印キーが押されていたら
-            kk_rct.move_ip(0, -1)
-        if key_lst[pg.K_DOWN]:  # 下矢印キーが押されていたら
-            kk_rct.move_ip(0, +1)
-        if key_lst[pg.K_LEFT]:  # 左矢印キーが押されていたら
-            kk_rct.move_ip(-1, 0)
-        if key_lst[pg.K_RIGHT]:  # 右矢印キーが押されていたら
-            kk_rct.move_ip(+2, 0)
-            
+        a = 0
+        b = 0
+        if key_lst[pg.K_UP]:
+            a-=1
+        if key_lst[pg.K_DOWN]:
+            a+=1
+        if key_lst[pg.K_LEFT]:
+            b-=1
+        if key_lst[pg.K_RIGHT]:
+            a+=2
+        kk_rct.move_ip((b,a))  
+                  
         x= tmr%3200
 
         screen.blit(bg_img, [-x, 0])
