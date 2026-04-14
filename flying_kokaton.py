@@ -22,7 +22,7 @@ def main():
 
         key_lst = pg.key.get_pressed()  # 練習10：すべてのキーの押下状態の取得
         a = 0
-        b = 0
+        b = -1
         if key_lst[pg.K_UP]:
             a-=1
         if key_lst[pg.K_DOWN]:
