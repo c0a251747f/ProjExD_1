@@ -19,6 +19,7 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
+
         key_lst = pg.key.get_pressed()  # 練習10：すべてのキーの押下状態の取得
         # print(key_lst)
         if key_lst[pg.K_UP]:  # 上矢印キーが押されていたら
@@ -35,7 +36,7 @@ def main():
         screen.blit(bg_img, [-x, 0])
         screen.blit(bg_img2, [-x+1600, 0])
         screen.blit(bg_img, [-x+3200, 0])
-        screen.blit(kk_img, [300, 200])
+        screen.blit(kk_img, kk_rct)
         pg.display.update()
         tmr += 1    
         clock.tick(200)
